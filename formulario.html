@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+
+<body>
+    <form action="" method="">
+        <table >
+            <tr>
+                <td>
+                    <label for="name">Nombre:</label>
+                </td>
+                <td>
+                    <input type="text" placeholder="Coloque su nombre" maxlength="10" required name="name" id="name">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="lastname">Apellido</label>
+                </td>
+                <td>
+                    <input type="text" placeholder="Apellido solo lectura" readonly name="lastname">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="">Edad</label>
+                </td>
+                <td>
+                    <input type="text" placeholder="Edad" disabled name="age">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="email">E-mail</label>
+                </td>
+                <td>
+                    <input type="email" placeholder="Correo electrónico" required name="email" id="email">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="password">Contraseña</label>
+                </td>
+                <td>
+                    <input type="password" placeholder="Clave de usuario" maxlength="10">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="description">Su descripción</label>
+                </td>
+                <td>
+                    <textarea name="description" placeholder="Escriba su descripción" id="description" cols="30" rows="10"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="study">Estudios</label>
+                </td>
+                <td>
+                    <select name="study" id="study">
+                        <option>Seleccione una opción</option>
+                        <option value="Universidad">Universidad</option>
+                        <option value="Postgrado">Postgrado</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Género</label>
+                </td>
+                <td>
+                    <input type="radio" name="gender" value="man" id="man">
+                    <label for="man">Hombre</label>
+                    <input type="radio" name="gender" value="woman" id="woman">
+                    <label for="woman">Mujer</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Qué lenguajes conoce?</label>
+                </td>
+                <td>
+                    <input type="checkbox" name="language" value="HTML5" id="HTML5">
+                    <label for="HTML5">HTML5</label>
+                    <input type="checkbox" name="language" value="CSS" id="CSS">
+                    <label for="CSS">CSS</label>
+                    <input type="checkbox" name="language" value="JavaScript" id="JavaScript">
+                    <label for="JavaScript">JavaScript</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="color">Seleccione un color</label>
+                </td>
+                <td>
+                    <input type="color" name="color" id="color">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="number">Seleccione un número</label>
+                </td>
+                <td>
+                    <input type="number" name="number" id="number" min="0" max="10">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="range">Seleccione un rango</label>
+                </td>
+                <td>
+                    <input type="range" name="range" id="number" min="100000" max="1000000">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="url">Ingrese la URL</label>
+                </td>
+                <td>
+                    <input type="url" name="url" placeholder="Página Web" id="url">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="file">Seleecione un archivo</label>
+                </td>
+                <td>
+                    <input type="file" name="file" id="file">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="Enviar">
+                    <input type="reset" value="clear">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

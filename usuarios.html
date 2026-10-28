@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> Contacto | Subnáutica</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #020f16;
+            color: white;
+        }
+
+
+        /* =========================
+           MENÚ
+        ========================= */
+
+        header {
+            width: 100%;
+            height: 70px;
+
+            background: rgba(2, 15, 22, 0.97);
+
+            display: flex;
+            align-items: center;
+
+            padding: 0 35px;
+
+            position: fixed;
+            top: 0;
+            left: 0;
+
+            z-index: 1000;
+
+            border-bottom: 1px solid #06404c;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+
+            margin-right: 50px;
+        }
+
+        .logo img {
+            width: 42px;
+            height: 42px;
+
+            object-fit: contain;
+
+            margin-right: 12px;
+        }
+
+        .logo h2 {
+            font-size: 16px;
+        }
+
+        .logo p {
+            color: #00a896;
+
+            font-size: 8px;
+
+            letter-spacing: 3px;
+
+            margin-top: 4px;
+        }
+
+        nav {
+            display: flex;
+            gap: 28px;
+        }
+
+        nav a {
+            color: #a8b8bb;
+
+            text-decoration: none;
+
+            font-size: 13px;
+
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #00d6c3;
+        }
+
+        .boton-inicio {
+            margin-left: auto;
+
+            padding: 10px 22px;
+
+            border: 1px solid #00a896;
+
+            border-radius: 25px;
+
+            color: white;
+
+            text-decoration: none;
+
+            font-size: 12px;
+        }
+
+
+        /* =========================
+           PORTADA
+        ========================= */
+
+        .portada {
+            min-height: 480px;
+
+            padding-top: 70px;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            text-align: center;
+
+            background:
+                linear-gradient(rgba(2, 45, 60, 0.5),
+                    rgba(2, 15, 22, 1)),
+                url("imagenes/oceano.jpg");
+
+            background-size: cover;
+
+            background-position: center;
+        }
+
+        .portada-contenido {
+            max-width: 850px;
+        }
+
+        .etiqueta {
+            color: #00a896;
+
+            font-size: 11px;
+
+            letter-spacing: 5px;
+
+            margin-bottom: 20px;
+        }
+
+        .portada h1 {
+            font-size: 65px;
+
+            line-height: 1;
+        }
+
+        .portada h1 span {
+            color: #00a896;
+        }
+
+        .portada p:last-child {
+            color: #91a9ad;
+
+            font-size: 19px;
+
+            font-style: italic;
+
+            margin-top: 25px;
+        }
+
+
+        /* =========================
+           EQUIPO
+        ========================= */
+
+        .equipo {
+            padding: 90px 7%;
+
+            background: #031923;
+
+            text-align: center;
+        }
+
+        .numero {
+            color: #00a896;
+
+            font-size: 11px;
+
+            letter-spacing: 4px;
+
+            margin-bottom: 15px;
+        }
+
+        .equipo h2 {
+            font-size: 45px;
+
+            margin-bottom: 15px;
+        }
+
+        .descripcion {
+            max-width: 650px;
+
+            margin: auto;
+
+            color: #91a9ad;
+
+            line-height: 1.7;
+
+            font-size: 15px;
+        }
+
+
+        /* =========================
+           TARJETAS
+        ========================= */
+
+        .personas {
+            max-width: 1200px;
+
+            margin: 65px auto;
+
+
+
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 20px;
+
+        }
+
+        .persona {
+            background: #062632;
+
+            border: 1px solid #0a4a59;
+
+            border-radius: 18px;
+
+            padding: 35px 20px;
+
+            transition: 0.3s;
+        }
+
+        .persona:hover {
+            transform: translateY(-8px);
+
+            border-color: #00a896;
+
+            box-shadow:
+                0 15px 40px rgba(0, 168, 150, 0.15);
+        }
+
+
+        /* =========================
+           FOTOS
+        ========================= */
+
+        .foto {
+            width: 170px;
+            height: 170px;
+
+            margin: 0 auto 25px;
+
+            border-radius: 50%;
+
+            overflow: hidden;
+
+            border: 4px solid #00a896;
+
+            background: #0a5363;
+
+
+        }
+
+
+        .foto img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+
+
+        /* =========================
+           INFORMACIÓN PERSONA
+        ========================= */
+
+        .persona h3 {
+            font-size: 18px;
+
+            margin-bottom: 10px;
+        }
+
+        .cargo {
+            color: #00a896;
+
+            font-size: 10px;
+
+            font-weight: bold;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 15px;
+        }
+
+        .persona .texto {
+            color: #91a9ad;
+
+            font-size: 13px;
+
+            line-height: 1.6;
+        }
+
+
+        /* =========================
+           FRASE
+        ========================= */
+
+        .frase-final {
+            min-height: 300px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            align-items: center;
+
+            text-align: center;
+
+            padding: 50px 20px;
+
+            background:
+                linear-gradient(135deg,
+                    #02151e,
+                    #064456);
+        }
+
+        .frase-final h2 {
+            max-width: 750px;
+
+            font-size: 38px;
+
+            line-height: 1.2;
+        }
+
+        .frase-final p {
+            margin-top: 20px;
+
+            color: #00a896;
+
+            font-size: 11px;
+
+            letter-spacing: 3px;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            height: 200px;
+
+            background: #020f16;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 8px;
+
+            text-align: center;
+        }
+
+        footer img {
+            width: 50px;
+        }
+
+        footer h3 {
+            letter-spacing: 3px;
+        }
+
+        footer p {
+            color: #00a896;
+
+            font-size: 9px;
+
+            letter-spacing: 3px;
+        }
+
+
+        /* =========================
+           FORMULARIO
+        ========================= */
+
+        .caja-formulario {
+            max-width: 650px;
+
+            margin: 90px auto 0;
+
+            padding: 45px 40px;
+
+            background: #062632;
+
+            border: 1px solid #0a4a59;
+
+            border-radius: 18px;
+
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+        }
+
+        .caja-formulario h2 {
+            font-size: 32px;
+
+            margin-bottom: 10px;
+        }
+
+        .caja-formulario form {
+            margin-top: 30px;
+        }
+
+        .caja-formulario table {
+            width: 100%;
+
+            text-align: left;
+        }
+
+        .caja-formulario td {
+            padding: 10px 5px;
+        }
+
+        .caja-formulario label {
+            color: #a8b8bb;
+
+            font-size: 14px;
+        }
+
+        .caja-formulario input[type="text"],
+        .caja-formulario input[type="email"],
+        .caja-formulario textarea {
+            width: 100%;
+
+            padding: 12px 15px;
+
+            background: #031923;
+
+            border: 1px solid #0a4a59;
+
+            border-radius: 10px;
+
+            color: white;
+
+            font-family: Arial, sans-serif;
+
+            font-size: 14px;
+        }
+
+        .caja-formulario input:focus,
+        .caja-formulario textarea:focus {
+            outline: none;
+
+            border-color: #00a896;
+        }
+
+        .caja-formulario input[type="radio"] {
+            accent-color: #00a896;
+
+            margin-left: 10px;
+        }
+
+        .botones {
+            text-align: center;
+
+            padding-top: 20px;
+        }
+
+        .botones input {
+            padding: 12px 35px;
+
+            margin: 0 8px;
+
+            border: 1px solid #00a896;
+
+            border-radius: 25px;
+
+            font-size: 14px;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+        .botones input[type="submit"] {
+            background: #00a896;
+
+            color: white;
+        }
+
+        .botones input[type="reset"] {
+            background: transparent;
+
+            color: #00a896;
+        }
+
+        .botones input:hover {
+            background: #00d6c3;
+
+            color: #020f16;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 1000px) {
+
+            nav {
+                display: none;
+            }
+
+            .personas {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            header {
+                padding: 0 15px;
+            }
+
+            .logo {
+                margin-right: 0;
+            }
+
+            .boton-inicio {
+                display: none;
+            }
+
+            .portada h1 {
+                font-size: 45px;
+            }
+
+            .personas {
+                grid-template-columns: 1fr;
+            }
+
+            .equipo h2 {
+                font-size: 35px;
+            }
+
+            .caja-formulario {
+                padding: 30px 20px;
+            }
+
+            .caja-formulario td {
+                display: block;
+            }
+
+        }
+
+        /* =========================
+   MAPA EN PÁGINA DE USUARIOS
+========================= */
+
+        .ubicacion-equipo {
+            margin-top: 100px;
+            padding-top: 70px;
+            border-top: 1px solid #0a4a59;
+        }
+
+        .ubicacion-equipo h2 {
+            font-size: 42px;
+            margin-bottom: 18px;
+        }
+
+        .mapa {
+            max-width: 1100px;
+            margin: 45px auto 0;
+            padding: 10px;
+            background: #062632;
+            border: 1px solid #0a4a59;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+        }
+
+        .mapa iframe {
+            width: 100%;
+            height: 500px;
+            display: block;
+            border-radius: 12px;
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         MENÚ
+    ========================= -->
+
+    <header>
+
+        <div class="logo">
+
+            <img src="imagenes/logo.png" alt="Logo Subnáutica">
+
+            <div>
+
+                <h2>Subnáutica</h2>
+
+                <p>EXPEDICIÓN SUBMARINA</p>
+
+            </div>
+
+        </div>
+
+
+        <nav>
+
+            <a href="index.html">Inicio</a>
+
+            <a href="oceano.html">El océano desconocido</a>
+
+            <a href="index.html#profundidades">Las profundidades</a>
+
+            <a href="index.html#criaturas">Criaturas</a>
+
+            <a href="index.html#misterios">Misterios</a>
+
+            <a href="index.html#exploracion">Exploración</a>
+
+            <a href="usuarios.html">Usuarios</a>
+
+        </nav>
+
+
+        <a href="index.html" class="boton-inicio">
+            Inicio
+        </a>
+
+    </header>
+
+
+
+    <!-- =========================
+         PORTADA
+    ========================= -->
+
+    <section class="portada">
+
+        <div class="portada-contenido">
+
+            <p class="etiqueta">
+                EXPEDICIÓN SUBNAÚTICA
+            </p>
+
+            <h1>
+                NUESTRO
+                <span>EQUIPO</span>
+            </h1>
+
+            <p>
+                Conoce a las personas detrás de esta exploración.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         EQUIPO
+    ========================= -->
+
+    <section class="equipo">
+
+        <p class="numero">
+            01 · CONTACTOS
+        </p>
+
+        <h2>
+            Exploradores de Subnáutica
+        </h2>
+
+        <p class="descripcion">
+            Somos un equipo interesado en investigar y compartir
+            información sobre los misterios, criaturas y
+            profundidades del océano.
+        </p>
+
+
+        <div class="personas">
+
+
+            <!-- PERSONA 1 -->
+
+            <article class="persona">
+
+                <div class="foto">
+
+                    <img src="imagenes/val.jpg" alt="Integrante 1">
+
+                </div>
+
+                <h3>
+                    VALENTINA DIAZ RIOS
+                </h3>
+
+                <p class="cargo">
+                    ADMINISTRADORA - PROGRAMADORA
+                </p>
+
+                <p class="texto">
+                    Organiza el proyecto, distribuye las tareas y ademas se encarga de escribir el codigo y desarrolla
+                    las funciones de la pagina.
+                </p>
+
+            </article>
+
+
+
+            <!-- PERSONA 2 -->
+
+            <article class="persona">
+
+                <div class="foto">
+
+                    <img src="imagenes/yul.jpg" alt="Integrante 2">
+
+                </div>
+
+                <h3>
+                    YULIANA SOTO MORALES
+                </h3>
+
+                <p class="cargo">
+                    ANALISTA - DOCUMENTADORA
+                </p>
+
+                <p class="texto">
+                    Analiza las necesidades del proyecto y de los usuarios, define los requisitos y registra toda la
+                    información, avances y procesos realizados.
+                </p>
+
+            </article>
+
+
+
+            <!-- PERSONA 3 -->
+
+            <article class="persona">
+
+                <div class="foto">
+
+                    <img src="imagenes/jua.jpg" alt="Integrante 3">
+
+                </div>
+
+                <h3>
+                    JUAN MANUEL SALAZAR CADAVID
+                </h3>
+
+                <p class="cargo">
+                    DISEÑADOR
+                </p>
+
+                <p class="texto">
+                    Se encarga de la apariencia del proyecto, como los colores, imagines, botones, distribución y que
+                    sea facil de usar.
+                </p>
+
+            </article>
+
+
+
+        </div>
+
+        <!-- =========================
+             FORMULARIO
+        ========================= -->
+
+        <div class="caja-formulario">
+
+            <p class="numero">
+                ESCRÍBENOS
+            </p>
+
+            <h2>
+                Déjanos tu comentario
+            </h2>
+
+            <p class="descripcion">
+                Cuéntanos qué te pareció nuestra expedición.
+            </p>
+
+            <form action="registro.php" name="" method="POST">
+                <table>
+                    <tr>
+                        <td>
+                            <label for="Nombre">Nombre:</label>
+                        </td>
+                        <td>
+                            <input type="text" placeholder="Coloque su nombre" maxlength="30" required name="nombre"
+                                id="nombre">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="Apellido">Apellido:</label>
+                        </td>
+                        <td>
+                            <input type="text" placeholder="Coloque su apellido" name="apellido" id="apellido">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="correo">correo:</label>
+                        </td>
+                        <td>
+                            <input type="correo" placeholder="Correo electrónico" required name="correo" id="correo">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Género:</label>
+                        </td>
+                        <td>
+                            <input type="radio" name="gender" value="man" id="man">
+                            <label for="man">Hombre</label>
+                            <input type="radio" name="gender" value="woman" id="woman">
+                            <label for="woman">Mujer</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="Comentario">Comentario:</label>
+                        </td>
+                        <td>
+                            <textarea name="Comentario" placeholder="Escriba su comentario" id="Comentario" cols="30"
+                                rows="6"></textarea>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td colspan="2" class="botones">
+                            <input type="submit" value="Enviar">
+                            <input type="reset" value="Borrar">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         FRASE
+    ========================= -->
+
+    <section class="frase-final">
+
+        <!-- =========================
+     UBICACIÓN DEL EQUIPO
+========================= -->
+
+        <div class="ubicacion-equipo">
+
+            <p class="numero">
+                02 · NUESTRA UBICACIÓN
+            </p>
+
+            <h2>
+                ¿Dónde nos encontramos?
+            </h2>
+
+            <p class="descripcion">
+                Conoce el lugar desde donde nace nuestro proyecto
+                y comienza nuestra expedición hacia los misterios del océano.
+            </p>
+
+            <div class="mapa">
+
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.856745412183!2d-75.5755271250058!3d6.282555625916398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4428d63a4c5f53%3A0x9781208715f7436d!2sI.E.%20Dinamarca!5e0!3m2!1ses!2sco!4v1789156185143!5m2!1ses!2sco"
+                    width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+
+            </div>
+
+        </div>
+
+        <p>
+            SUBNÁUTICA · EXPEDICIÓN A LAS PROFUNDIDADES
+        </p>
+
+    </section>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <img src="imagenes/logo.png" alt="Logo">
+
+        <h3>
+            SUBNÁUTICA
+        </h3>
+
+        <p>
+            EXPEDICIÓN A LAS PROFUNDIDADES
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
