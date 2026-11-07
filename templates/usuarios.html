@@ -136,7 +136,7 @@
             background:
                 linear-gradient(rgba(2, 45, 60, 0.5),
                     rgba(2, 15, 22, 1)),
-                url("imagenes/oceano.jpg");
+                url("/static/imagenes/oceano.jpg");
 
             background-size: cover;
 
@@ -626,7 +626,7 @@
 
         <div class="logo">
 
-            <img src="imagenes/logo.png" alt="Logo Subnáutica">
+            <img src="/static/imagenes/logo.png" alt="Logo Subnáutica">
 
             <div>
 
@@ -641,24 +641,26 @@
 
         <nav>
 
-            <a href="index.html">Inicio</a>
+            <a href="/">Inicio</a>
 
-            <a href="oceano.html">El océano desconocido</a>
+            <a href="/#oceano">El océano desconocido</a>
 
-            <a href="index.html#profundidades">Las profundidades</a>
+            <a href="/#profundidades">Las profundidades</a>
 
-            <a href="index.html#criaturas">Criaturas</a>
+            <a href="/#criaturas">Criaturas</a>
 
-            <a href="index.html#misterios">Misterios</a>
+            <a href="/#misterios">Misterios</a>
 
-            <a href="index.html#exploracion">Exploración</a>
+            <a href="/#exploracion">Exploración</a>
 
-            <a href="usuarios.html">Usuarios</a>
+            <a href="/usuarios">Usuarios</a>
+
+            <a href="/registros">Comentarios</a>
 
         </nav>
 
 
-        <a href="index.html" class="boton-inicio">
+        <a href="/" class="boton-inicio">
             Inicio
         </a>
 
@@ -723,7 +725,7 @@
 
                 <div class="foto">
 
-                    <img src="imagenes/val.jpg" alt="Integrante 1">
+                    <img src="/static/imagenes/val.jpg" alt="Integrante 1">
 
                 </div>
 
@@ -750,7 +752,7 @@
 
                 <div class="foto">
 
-                    <img src="imagenes/yul.jpg" alt="Integrante 2">
+                    <img src="/static/imagenes/yul.jpg" alt="Integrante 2">
 
                 </div>
 
@@ -777,7 +779,7 @@
 
                 <div class="foto">
 
-                    <img src="imagenes/jua.jpg" alt="Integrante 3">
+                    <img src="/static/imagenes/jua.jpg" alt="Integrante 3">
 
                 </div>
 
@@ -818,7 +820,7 @@
                 Cuéntanos qué te pareció nuestra expedición.
             </p>
 
-            <form action="registro.php" name="" method="POST">
+            <form action="/registro" method="POST">
                 <table>
                     <tr>
                         <td>
@@ -842,7 +844,7 @@
                             <label for="correo">correo:</label>
                         </td>
                         <td>
-                            <input type="correo" placeholder="Correo electrónico" required name="correo" id="correo">
+                            <input type="email" placeholder="Correo electrónico" required name="correo" id="correo">
                         </td>
                     </tr>
                     <tr>
@@ -933,7 +935,7 @@
 
     <footer>
 
-        <img src="imagenes/logo.png" alt="Logo">
+        <img src="/static/imagenes/logo.png" alt="Logo">
 
         <h3>
             SUBNÁUTICA
